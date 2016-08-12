@@ -1,0 +1,66 @@
+<section class="interactive-section" id="section-articles">
+    {{#with section_reader_questions}}
+        <div id="talking-heads-container" class="main-column">
+            <div id="talking-head-title">
+                <p>{{label}}</p>
+            </div>
+            {{#each questions}}
+                <div class="talking-head">
+                    <video preload="none" poster="{{poster}}" height="auto" width="100%">
+                        <source type="video/mp4" src="{{mp4_path}}">
+                    </video>
+                    <img src="%assetPath%/assets/imgs/video-mask.png" class="talking-head-mask" width="100%" height="auto"/>
+                    <div class="talking-head-info">
+                        <p>Listen to <span>{{name}}</span></p>
+                    </div>
+                    <div class="playButton"></div>
+                </div>
+            {{/each}}
+        </div>
+        <div class="interactive-article main-column">
+            <h3><a href="{{readmore_link}}">{{headline}}</a></h3>
+            <p>{{copy}} <a class="read-more" href="{{readmore_link}}">Read more</a></p>
+        </div>
+        {{/with}}
+    </section>
+    <section class="interactive-section" id="section-video">
+        {{#with section_video}}
+        <div class="main-column">
+            <div id="video-title-container">
+                <div id="video-title-background">
+                    <svg preserveAspectRatio="none" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="678.758px" height="153.667px" viewBox="0 0 678.758 153.667" enable-background="new 0 0 678.758 153.667" xml:space="preserve"><g opacity="1"><g><defs><polygon id="SVGID_1_" points="0,159.9 678.758,141.9 678.758,11 0,0"></polygon></defs><clipPath id="SVGID_2_"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SVGID_1_" overflow="visible"></use></clipPath><polygon clip-path="url(#SVGID_2_)" fill="#004077" points="677.758,-9 1,-9 11.412,151.895 667.346,105.747"></polygon></g></g></svg>
+                </div>
+                <h4>{{video_label}}</h4>
+            </div>
+            <div class="interactive-video-container">
+                <iframe src="" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                <div class="video-placeholder">
+                    <div class="placeholder-button"></div>
+                </div>
+            </div>
+            <h3><a href="{{readmore_link}}">{{video_title}}</a></h3>
+            <p>{{video_copy}} <a class="read-more" href="{{readmore_link}}">Read more</a></p>
+        </div>
+        {{/with}}
+    </section>
+    <section class="interactive-section" id="section-form">
+        {{#with section_email}}
+        <div id="form-background">
+            <svg preserveAspectRatio="none" width="1300px" height="76px" viewBox="0 0 1300 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="shape" fill="#00B0CF"> <path d="M0,-1.13686838e-13 L1300,-1.13686838e-13 L1280,75.79 L20,2.828 L0,-1.13686838e-13 Z" id="Shape"></path> </g> </g> </svg>
+        </div>
+        <div class="main-column">
+            <p>{{label}}</p>
+            <iframe src="https://s3.amazonaws.com/gdn-cdn/embed/labour-and-liverpool-forms/emailform.html" frameborder="0" width="300" height="400"></iframe>
+        </div>
+        <div id="contact-ewen-section">
+            <div class="ewen-textbox">
+                <div class="textbox-container">Want to ask a question or contact me directly?</div>
+                <img src="%assetPath%/assets/imgs/Ewen.png" />
+            </div>
+            <div class="contact-buttons">
+                <a href="https://twitter.com/ewenmacaskill" class="contact-twitter">Twitter</a>
+                <a href="mailto:e.macaskill@guardian.co.uk" class="contact-mail">Email</a>
+            </div>
+        </div>
+        {{/with}}
+    </section>
