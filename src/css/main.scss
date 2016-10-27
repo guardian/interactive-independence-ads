@@ -11,19 +11,22 @@ $gBright: #4BC6DF;
 .element-interactive {
 	overflow: hidden;
 }
-#header {
+#header,
+header,
+.gs-container.u-cf,
+.content-footer {
 	display: none;
 }
-body {
-	background: $gDark;
+.content--interactive .element-interactive {
+	overflow: visible;
 }
 
 #g-independence-10-16 {
 	.full-width-wrapper {
-		margin: 0 -10px;
+		margin: 0 -20px;
 		padding: 0 10px;
 		@include mq(mobileLandscape) {
-			margin: 0 -20px;
+			margin: 0 -40px;
 			padding: 0 20px;
 		}
 		@include mq(tablet) {
@@ -109,10 +112,6 @@ body {
 					animation-fill-mode: forwards;
 					opacity: 0;
 
-					// font-size: 42px;
-					// font-weight: 800;
-					// color: #fff;
-					// font-family: 'Guardian Egyptian Web', serif;
 
 
 
@@ -324,6 +323,21 @@ body {
 				font-weight: 400;
 				margin: 0 0 13px;
 			}
+			.scroll {
+				&:after {
+					content: '';
+					// background-image: url('data:image/svg+xml;utf8,<svg width="14px" height="14px" viewBox="525 456 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch --><desc>Created with Sketch.</desc><defs></defs><path d="M532,470 C535.865993,470 539,466.865993 539,463 C539,459.134007 535.865993,456 532,456 C528.134007,456 525,459.134007 525,463 C525,466.865993 528.134007,470 532,470 Z M527.586372,461.867688 L528.340972,461.08299 L532,464.368225 L535.659028,461.08299 L536.413628,461.867688 L532.312667,466.244444 L531.687333,466.244444 L527.586372,461.867688 Z" id="Combined-Shape" stroke="none" fill="#333333" fill-rule="evenodd"></path></svg>');
+					// background-image: url('data:image/svg+xml;utf8,<svg width="14px" height="14px" viewBox="501 456 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->    <desc>Created with Sketch.</desc>    <defs>        <circle id="path-1" cx="7" cy="7" r="7"></circle>        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="14" fill="white">            <use xlink:href="#path-1"></use>        </mask>        <polygon id="path-3" points="3 5.37037037 6.8173516 9.44444444 7.1826484 9.44444444 11 5.37037037 10.6438356 5 7 8.2748538 3.35616438 5"></polygon>    </defs>    <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(501.000000, 456.000000)">        <use id="Oval" stroke="#333333" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>        <g id="">            <use fill="#333333" fill-rule="evenodd" xlink:href="#path-3"></use>            <use fill="black" fill-opacity="1" xlink:href="#path-3"></use>        </g>    </g></svg>');
+					// background-image: url('data:image/svg+xml;utf8,<svg width="14px" height="14px" viewBox="501 456 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch --><desc>Created with Sketch.</desc><defs><circle id="path-1" cx="7" cy="7" r="7"></circle><mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="14" fill="white"><use xlink:href="#path-1"></use></mask><polygon id="path-3" points="3 5.87037037 6.8173516 9.94444444 7.1826484 9.94444444 11 5.87037037 10.6438356 5.5 7 8.7748538 3.35616438 5.5"></polygon></defs><g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(501.000000, 456.000000)"><use id="Oval" stroke="#333333" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use><g><use fill="#333333" fill-rule="evenodd" xlink:href="#path-3"></use><use fill="black" fill-opacity="1" xlink:href="#path-3"></use></g></g></svg>');
+					background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="572 474 12 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><circle id="a" cx="6" cy="6" r="6"/><mask id="b" x="0" y="0" width="12" height="12" fill="#fff"><use xlink:href="#a"/></mask><path id="c" d="M2.57 5.03l3.27 3.5h.32l3.27-3.5-.3-.32L6 7.54l-3.12-2.8z"/></defs><g fill="none" fill-rule="evenodd" transform="translate(572 474)"><use stroke="#333" mask="url(#b)" stroke-width="2" xlink:href="#a"/><use fill="#333" xlink:href="#c"/><use fill="#000" xlink:href="#c"/></g></svg>');
+					width: 12px;
+					height: 12px;
+					display: inline-block;
+					margin: 0 1px 0 2px;
+					position: relative;
+					top: 1px;
+				}
+			}
 			.find-out-more {
 				font-size: 18px;
 				text-decoration: none;
@@ -420,25 +434,38 @@ body {
 			}
 			.social {
 				height: 2.3em;
-				i {
+				.icon {
+					position: relative;
 					display: inline-block;
 					width: 32px;
 					height: 32px;
 					border-radius: 100%;
-					margin: 5px 5px 0 0;
-				}
-				i:nth-child(1) {
-					background-color: #336EA7;
-				}
-				i:nth-child(2) {
-					background-color: #04B5E8;
-				}
-				i:nth-child(3) {
-					background-color: #767676;
-				}
-				i:nth-child(4) {
-					margin-left: 4px;
-					background-color: #DCDCDC;
+					margin: 5px 2px 0 0;
+					color: inherit;
+					opacity: 1;
+					transition: opacity 160ms;
+					.alt {
+						visibility: hidden;
+					}
+					svg {
+						position: absolute;
+						top: 0;
+						left: 0;
+						fill: #fff;
+					}
+					&:hover {
+						opacity: 0.9;
+						transition: opacity 320ms;
+					}
+					&.facebook {
+						background-color: #336EA7;
+					}
+					&.twitter {
+						background-color: #04B5E8;
+					}
+					&.email {
+						background-color: #767676;
+					}
 				}
 			}
 		}
@@ -499,12 +526,13 @@ body {
 					}
 				}
 				.cta {
-					display: block;
+					position: relative;
+					display: inline-block;
 					font-family: "Guardian Sans Web";
 					font-size: 20px;
 					line-height: 22px;
 					@include mq(mobileLandscape) {
-						margin-top: 2px;
+						padding-top: 2px;
 						font-size: 24px;
 						line-height: 26px;
 					}
@@ -512,21 +540,44 @@ body {
 					padding: 10px 0;
 					text-decoration: none;
 					color: inherit;
+					overflow: visible;
 					&:after {
 						content: '';
-						background-color: #005689;
+						background-repeat: no-repeat;
 						border-radius: 100%;
+						position: relative;
+						z-index: 11;
 						background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%229863%205567%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(9863%205567)%22%3E%3Ccircle%20fill%3D%22%23005689%22%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%2F%3E%3Cpath%20fill%3D%22%23F6F6F6%22%20d%3D%22M15.73%2012.7l-3.63%204.36-.1.14.12.13.5.5.14.15.15-.15%205.45-5.44.06-.16v-.52l-.05-.14L12.75%206l-.76.78%203.72%204.5H6v1.43%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 						background-size: 24px 24px;
+						background-position: 50% 50%;
 						width: 24px;
 						height: 24px;
 						display: inline-block;
 						vertical-align: middle;
 						margin-left: 4px;
-						transition: all 300ms;
+						transition: all 160ms;
+						transform-origin: left center;
 					}
-					&:hover:after {
-						transform: scale(1.1) translateX(0.5px);
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						bottom: 10px;
+						left: 0;
+						right: 29px;
+						width: auto;
+						height: 2px;
+						background-color: currentColor;
+						opacity: 0;
+						transition: all 240ms;
+					}
+					&:hover {
+						&:before {
+							opacity: 1;
+						}
+						&:after {
+							transform: scale(1.1);
+						}
 					}
 				}
 
@@ -600,7 +651,6 @@ body {
 				}
 				&:before,
 				&:after {
-					// background-color: #BFBFBF;
 					background-color: #b3b3b3;
 				}
 
@@ -662,12 +712,6 @@ body {
 						}
 					}
 				}
-				// &:before {
-				// 	background-color: #1c1815;
-				// }
-				// &:after {
-				// 	background-color: #181c13;
-				// }
 				&:before,
 				&:after {
 					background-color: #171a14;
@@ -741,10 +785,6 @@ body {
 						}
 					}
 				}
-				// &:before,
-				// &:after {
-				// 	background-color: #485254;
-				// }
 				&:before,
 				&:after {
 					background-color: #424b4d;
@@ -807,12 +847,6 @@ body {
 						}
 					}
 				}
-				// &:before {
-				// 	background-color: #ffe6b0;
-				// }
-				// &:after {
-				// 	background-color: #c2b5a3;
-				// }
 				&:before,
 				&:after {
 					background-color: #c1bfbe;
@@ -856,12 +890,6 @@ body {
 						background-position: 60% top;
 					}
 				}
-				// &:before {
-				// 	background-color: #b0bfb7;
-				// }
-				// &:after {
-				// 	background-color: #BCC8CC;
-				// }
 				&:before,
 				&:after {
 					background-color: #c6cbd2;
@@ -922,12 +950,6 @@ body {
 						}
 					}
 				}
-				// &:before {
-				// 	background-color: tomato;
-				// }
-				// &:after {
-				// 	background-color: #282631;
-				// }
 				&:before,
 				&:after {
 					background-color: #17151e;
@@ -955,14 +977,17 @@ body {
 			font-size: 24px;
 			line-height: 26px;
 			font-weight: 900;
-			max-width: 490px; // for format only
-			color: $gDark;
+			max-width: 490px;
+			@include mq(desktop) {
+				padding-right: 65px;
+			}
 			@include mq(leftCol) {
-				margin-left: 160px;
+				padding-right: 14px;
 			}
 			@include mq(wide) {
-				margin-left: 240px;
+				padding-right: 115px;
 			}
+			color: $gDark;
 		}
 		.membership-link {
 			position: relative;
@@ -984,11 +1009,7 @@ body {
 				background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="90" height="24" viewBox="24972 4031 90 24" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M25014.45 4031.14c-.52 0-.93.4-.93.92 0 .5.4.92.93.92.5 0 .93-.4.93-.92 0-.5-.42-.92-.93-.92m6.7 7.56h2.87v-.48l-.55-.26v-3.4c.2-.14.45-.2.7-.2.5 0 .72.2.72.75v2.9l-.6.3v.5h2.9v-.4l-.6-.2v-3.2c0-1-.5-1.4-1.3-1.4s-1.4.3-1.9.7v-.7h-.2l-2.2.4v.5l.6.3v3.6l-.6.3v.5zm-8.14-5.05v.48l.6.27v3.55l-.5.26v.5h2.9v-.5l-.5-.2v-4.6h-.1l-2.2.4zm-2.4 4.06c-.1.2-.3.2-.5.2-.7 0-1-.5-1-1.8 0-1.5.4-1.9 1-1.9.3 0 .5.1.6.3v3.4zm0-4.1c-.2-.1-.5-.2-.8-.2-1.3 0-2.5.8-2.5 2.9 0 2 1.3 2.7 2.1 2.7.7 0 1.1-.3 1.4-.5h.1v.6h.2l2.1-.2v-.4l-.5-.3v-6.7h-.1l-2.2.4v.5l.6.3v1.3zm-7.2.1v.5l.6.3v3.6l-.5.3v.5h3.1v-.5l-.7-.2v-2.8c.3-.2.7-.3 1.2-.3.2 0 .4 0 .5.1v-1.5h-.2c-.5 0-1.1.4-1.4 1.1v-1.1h-.1l-2.1.4zm-3.7.4h.5c.7 0 .9.4.9 1v.6l-1 .2c-1 .2-1.8.5-1.8 1.6 0 .9.6 1.5 1.5 1.5.7 0 1.3-.3 1.5-.7h.1c.1.6.6.8 1.1.8.5 0 .9-.1 1-.3v-.3l-.5-.3v-3.1c0-1.2-.9-1.6-2.3-1.6-.9 0-1.5.2-2 .5v1.4h.8l.4-1zm1.4 3.6c-.1.2-.3.3-.5.3-.3 0-.6-.2-.6-.7 0-.4.4-.8.8-.8h.3v1.5zm16.5-3.6h.5c.7 0 .9.4.9 1v.6l-1 .2c-1 .2-1.8.5-1.8 1.6 0 .9.6 1.5 1.5 1.5.7 0 1.3-.3 1.5-.7h.1c.1.6.6.8 1.1.8.5 0 .9-.1 1-.3v-.3l-.5-.3v-3.1c0-1.2-.8-1.6-2.2-1.6-.9 0-1.5.2-2 .5v1.4h.8l.4-1zm1.4 3.6c-.1.2-.3.3-.4.3-.3 0-.6-.2-.6-.7 0-.4.4-.8.8-.8h.4v1.5zm-26-.5c0 .9.5 1.7 1.6 1.7.7 0 1.3-.3 1.7-.7v.7h.2l2.2-.2v-.4l-.6-.3v-4.5h-.2l-2.2.4v.5l.6.3v3.2c-.2.1-.3.2-.6.2-.4 0-.7-.1-.7-.7v-3.7h-.2l-2.2.4v.5l.6.3v2.8zm-2.2.4h-1.8c-.2 0-.4-.1-.4-.3 0-.1.1-.3.3-.3.3.1.5.1.9.1 1.4 0 2.3-.6 2.3-1.7 0-.5-.2-.8-.5-1.1l.9.3v-1l-1.4.3c-.3-.1-.8-.3-1.2-.3-1.4 0-2.3.7-2.3 1.8 0 .7.3 1.2.9 1.5v.1c-.3.2-.9.7-.9 1.3 0 .4.3.8.9 1-.6.2-1.3.4-1.3 1.1 0 .7 1 1.4 2.7 1.4 2.1 0 3-.9 3-2.2 0-1-.5-1.5-1.7-1.5zm-1.1-3.6c.4 0 .7.3.7 1.2 0 1-.2 1.2-.6 1.2-.3 0-.6-.2-.6-1.1 0-1 .3-1.2.6-1.2zm0 6.6c-.9 0-1.3-.3-1.3-.7.1-.2.2-.6.6-.6h1.5c.5 0 .7.3.7.6 0 .6-.4.8-1.5.8zm-2.6-4.2c0-2.2-1-2.9-2.3-2.9-1.6 0-2.6 1.1-2.6 2.8 0 1.8.9 2.8 2.7 2.8 1 0 1.8-.5 2-.8l.1-.4c-.3.1-.7.2-1.4.2-.9 0-1.5-.5-1.5-1.5h3.2zm-2.3-2.3c.5 0 .7.3.7 1.7l-1.4.1c0-1.3.3-1.7.8-1.7z"/><path d="M24976.05 4038.7h2.87v-.48l-.55-.26v-3.38c.2-.14.45-.22.7-.22.5 0 .73.3.72.75v2.9l-.6.3v.5h2.9v-.4l-.6-.2v-3.2c0-1-.6-1.4-1.3-1.4-.7 0-1.4.3-1.9.7v-2.9h-.2l-2.2.4v.5l.6.3v5.8l-.6.3v.5zm-3.15-1.43c0 .96.46 1.57 1.5 1.57.55 0 1.13-.14 1.46-.4v-.63c-.14.1-.38.1-.57.1-.5 0-.7-.2-.7-.7v-2.7h1.1v-.9h-1.2v-1.2l-1.8.3v1l-.8.2v.8h.8v2.9zm11.98 17.6c-.14 0-.28-.08-.42-.18l-.1-.1c-.26-.2-.6-.5-.42-1 .2-.7 1.5-4.7 1.5-4.8-.14.2-2.35 2.1-4.13 3.1-.1.1-.6.4-.9.3-1.2-.3-.8-1.6-.4-1.8l.3-.2c.6-.3 2.4-1.2 4.2-2.9 1.3-1.2 3.2-3.6 3.3-3.9l.1-.3c.1-.2.4-.7.8-.6.1 0 .2 0 .3.1.6.2.8.7.7 1.2-.1.3-.3.6-.5.9l-.3.6-1.1 2.6c-.3.6-.5 1.2-.7 1.7l-.1.3.1-.1c.3-.4 1.2-1.9 2.3-3.3 1.1-1.5 3.1-4 3.5-4.2.5-.4 1.1.2 1.3.5.2.3.2.7.1 1l-1.5 4-.4 1.1-.2.5c.1-.1.2-.1.2-.2l2.5-2.6 4.2-4.5c.2-.3.5-.4.7-.4.1 0 .3.1.4.1.3.2.8.4.6 1-.1.2-1.7 5.6-1.8 5.8l-.5 1.7c0 .2-.1.6.1.9.5-.2 2.6-1.5 2.6-1.5v-1c.2-2.1 1.1-3.7 2-4.8.9-1 2.1-1.7 2.8-1.7.7.1 1.3.6 1.2 1.4 0 .63-.2 1.35-.6 2.1-.9 1.93-1.8 3.3-3 4.3l-.4.4s.1.2.4.23c.5.03 1-.17 1.4-.36 1.4-.7 2.6-1.7 3.8-3.16.6-.8 1.1-1.4 1.4-2 .3-.5.6-1.1.8-1.7l.3-.7c.1-.3.3-.7.8-.7.1 0 .2 0 .3.1.3.1.5.4.6.6.1.23.1.53-.1.84-.5.9-1.9 4.3-1.9 4.3-.1.2-.1.3 0 .3s2.4-2.5 3.5-3.8l1.9-2.1c.2-.3.7-.6 1.1-.4.5.25.6 1 .5 1.43l-1.3 3.5-.4 1.15c.1-.1.3-.2.4-.3 1.7-2.3 5.44-5.9 6.36-5.84.4 0 .7.4.9.7.1.2.2.46 0 .8-.45.66-1.7 4-1.8 4.26l-.77 2.4c-.1 0-.1.2-.1.3 0 0 3.1-2.4 4.1-3.7 1.9-2.2 4.7-9.2 4.8-9.5.3-.5.8-.8 1.3-.74.6 0 .7.4.7.7.1 1.18-3.9 8.2-3.9 8.27.2-.2 3.1-2.7 4.8-2.2.7.2.7.7.9 1.3.2 1.2-1.3 8.34-6.8 8.6-.7 0-1.7-.5-2-1.5 0 0-.2.1-.3.1-.3-.15-.5-.34-.6-.53-.1-.2-.07-.3 0-.6.1-.4 1.5-2-.3-.3-1.44 1.4-2.94 2.4-3.2 2.5-.2.1-.5.3-.75.3-.3-.1-.6-.2-.8-.5-.3-.4-.1-.9.1-1.4.2-.5.5-1.7.6-1.9l.4-1.28 1-3c.05-.1.1-.4.08-.4l-2.1 2.3c-.3.35-3 3.6-3.7 4.46-.2.2-.4.3-.7.3-.2 0-.4-.1-.52-.2-.44-.2-.6-.6-.4-1 .2-.6.3-1.1.48-1.7.1-.4.1-.7.23-1.1.1-.48.3-.95.45-1.4l.3-.65v-.3c0 .1-4.5 5.3-5.2 5.83-.1.17-.3.3-.6.3-.1 0-.6-.24-.9-.6-.2-.2-.3-.33.1-1 0-.13.2-.4.2-.6v-.1c-.1 0-1.6 1.7-3.7 2.6-.5.2-1.1.3-1.6.3-1.2-.1-1.84-.9-1.84-.9s-2.6 1.8-4.2 2.1c-.3.1-.8-.1-1-.4-.2-.3 0-1.5.2-2.3.3-1.3 1.1-3.6 1.2-4.07l.5-1.4v-.02h-.1l-2.54 2.8-2.7 2.95-1.22 1.5c-.2.2-.4.4-.7.3-.6-.1-.9-.7-.9-1 .1-.7.3-1.5.5-2.5.2-.7 1-3.2 1.1-3.4v-.07.1l-5.03 7.16c-.3.34-.5.6-.7.8-.2.2-.4.3-.6.3zm19.94-9.83c-1 .37-2.27 2.17-2.7 4.36.82-.83 2.64-3.55 2.7-4.36zm21.85 7.12c4.27-.55 6.23-7.43 3.88-6.1-1.6.92-3.62 3.12-4.47 5.4-.15.4-.08.9.6.7zm23.96 2.45c-.76 0-1.4-.4-1.8-1-.4-.6-.5-1.5-.24-2.2.1-.5.7-.9 1.3-1.1l2-1 .3-.7c.2-.5.6-1.7.8-2.1 0 0-.7.4-1.9.8s-3.2.8-3.9.9c-.8.1-1 .4-1.3.7-.7.9-1.6 2-2.3 3-.2.3-.5.6-1 .6-.2 0-.6-.2-.8-.4-.2-.2-.2-.4 0-.9.1-.2.9-1.6 1-1.9v-.1c-.6.6-4.4 4.2-6.6 4-2-.1-2.3-2.6-2.3-2.6s-.5.2-.6.2c-.2 0-.5-.3-.7-.7-.1-.3-.4-.9-.1-.9l1.3-.3c.3-2.1 1.4-3.6 1.8-4 1-1.2 2.1-1.5 2.5-1.6 1.3-.1 1.9.7 2 1.5 0 1.2-.6 2.2-1 2.9-1.4 1.9-3.5 2.6-3.5 2.6s0 1.1.7 1.2c1.6.1 5.8-3.5 7.4-5.5l2.1-2.8c.1-.1.2-.1.5 0 .4.1 1.2.7.8 1.3l-1.5 2.6c.2-.1.5-.3.9-.3 3.1-.2 5.8-1.3 6.7-2.6.5-.6 1.2-1.3 1.9-.8s.8 1.2.5 1.6c-.1.3-.5.7-1 1l-1.1 3.1s5.3-2.7 6.2-3.1c.3-.1.9.1 1.2.5.2.3.2.6-.1.7-1.6.8-8.2 4.2-8.2 4.2s-1 2.76-1.5 3.55c-.3.5-.9.6-1.2.6h-.1zm.55-3.1c-.56.3-.92.6-.97.8 0 .2.1.4.3.5.3.2.6-.7.8-1.2zm-14.1-5.7c-.5.9-.75 1.8-.76 1.9 1.56-.8 2.64-2.1 2.48-3.3h-.03c-.28.1-1.18.6-1.68 1.4z"/></g></svg>')
 			}
 			@include mq(desktop) {
-				left: 70px;
 				margin-top: 0;
-			}
-			@include mq(wide) {
-				left: 150px;
 			}
 			p,
 			.cta {
