@@ -112,7 +112,29 @@ header,
 					animation-fill-mode: forwards;
 					opacity: 0;
 
-
+					&.text-sentence {
+						color: #fff;
+						font-family: "Guardian Egyptian Web", serif;
+						font-weight: 700;
+						font-size: 42px;
+						line-height: 0.9em;
+						height: 1.7em;
+						em {
+							display: block;
+							margin-left: 2.1em;
+							font-style: normal;
+						}
+						@include mq(mobileLandscape) {
+							height: 2.15em;
+						}
+						@include mq(desktop) {
+							padding-bottom: 0.3em;
+						}
+						@include mq(leftCol) {
+							padding-top: 0.3em;
+							padding-bottom: 0.75em;
+						}
+					}
 
 
 					&.transform-top-right {
