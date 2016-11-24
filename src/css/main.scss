@@ -27,10 +27,14 @@ header,
 	#article-body {
 		overflow: visible;
 	}
+	#article-body {
+		width: calc(100% + 4px);
+		margin-left: -2px;
+	}
 	#article-header,
 	#tags,
 	& + .related-content {
-		display: none;
+		display: none !important;
 	}
 }
 
