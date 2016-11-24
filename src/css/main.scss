@@ -27,10 +27,14 @@ header,
 	#article-body {
 		overflow: visible;
 	}
+	#article-body {
+		width: calc(100% + 4px);
+		margin-left: -2px;
+	}
 	#article-header,
 	#tags,
 	& + .related-content {
-		display: none;
+		display: none !important;
 	}
 }
 
@@ -682,6 +686,7 @@ header,
 						bottom: 0;
 						padding-right: 30%;
 						max-width: 255px;
+						min-width: 214px;
 						color: #eaeaea;
 						@include mq(mobileLandscape) {
 							padding-right: 45%;
