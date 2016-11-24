@@ -21,6 +21,23 @@ header,
 	overflow: visible;
 }
 
+// App fixes
+#standard-article-container {
+	.element-interactive,
+	#article-body {
+		overflow: visible;
+	}
+	#article-body {
+		width: calc(100% + 4px);
+		margin-left: -2px;
+	}
+	#article-header,
+	#tags,
+	& + .related-content {
+		display: none !important;
+	}
+}
+
 #g-independence-10-16 {
 	.full-width-wrapper {
 		margin: 0 -20px;
@@ -689,8 +706,8 @@ header,
 					&__copy {
 						top: 0;
 						bottom: 0;
-						padding-right: 30%;
 						max-width: 255px;
+						min-width: 214px;
 						color: #eaeaea;
 						@include mq(mobileLandscape) {
 							padding-right: 45%;
