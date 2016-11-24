@@ -21,6 +21,19 @@ header,
 	overflow: visible;
 }
 
+// App fixes
+#standard-article-container {
+	.element-interactive,
+	#article-body {
+		overflow: visible;
+	}
+	#article-header,
+	#tags,
+	& + .related-content {
+		display: none;
+	}
+}
+
 #g-independence-10-16 {
 	.full-width-wrapper {
 		margin: 0 -20px;
