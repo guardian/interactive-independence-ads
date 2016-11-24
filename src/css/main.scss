@@ -682,6 +682,7 @@ header,
 						bottom: 0;
 						padding-right: 30%;
 						max-width: 255px;
+						min-width: 214px;
 						color: #eaeaea;
 						@include mq(mobileLandscape) {
 							padding-right: 45%;
